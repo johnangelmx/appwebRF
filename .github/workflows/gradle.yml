@@ -30,7 +30,7 @@ jobs:
         run: gradle build
 
       - name: Ejecutar
-        run: pm2 start java --  -jar -Dserver.port=8080 build/libs/eshop-0.0.1-SNAPSHOT.jar --log ~/reportes-eshop-app.log
+        run: pm2 start java --  -jar -Dserver.port=8080 build/libs/appwebRF-0.0.1-SNAPSHOT.jar
         env:
           PROD_DB_HOST: ${{ secrets.PROD_DB_HOST }}
           PROD_DB_PORT: ${{ secrets.PROD_DB_PORT }}
