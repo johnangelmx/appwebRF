@@ -19,4 +19,5 @@ public class Paquete {
     private Integer numero_personas;
     private Float precio;
     private Float precio_individual;
+    private Boolean estatus = true;
 }
