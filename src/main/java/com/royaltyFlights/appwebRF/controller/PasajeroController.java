@@ -57,9 +57,11 @@ public class PasajeroController {
                                     @RequestParam(required = false) Boolean pagado,
                                     @RequestParam(required = false) String dpi,
                                     @RequestParam(required = false) Float peso,
-                                    @RequestParam(required = false) String fecha
+                                    @RequestParam(required = false) String fecha,
+                                    @RequestParam(required = false) Float total
     ) {
-        return pasajeroService.actualizarPasajero(passangerID, id_viaje, nombres, apellidos, correo, hora, pagado, dpi, peso, fecha);
+        return pasajeroService.actualizarPasajero(passangerID, id_viaje, nombres, apellidos, correo, hora, pagado, dpi, peso, fecha,total
+        );
     }
 
 }

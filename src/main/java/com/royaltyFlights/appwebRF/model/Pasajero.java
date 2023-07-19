@@ -20,8 +20,9 @@ public class Pasajero {
     private String apellidos;
     private String correo;
     private Time hora;
-    private Boolean pagado;
+    private Boolean pagado = false;
     private String dpi;
     private Float peso;
     private Date fecha;
+    private Float total;
 }

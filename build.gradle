@@ -21,5 +21,8 @@ dependencies {
     implementation 'org.projectlombok:lombok:1.18.20'
     annotationProcessor 'org.projectlombok:lombok:1.18.20'
     runtimeOnly 'com.mysql:mysql-connector-j'
+    implementation "com.stripe:stripe-java:22.0.0"
+    implementation 'org.jasypt:jasypt:1.9.3'
+    implementation 'org.json:json:20230227'
 }
 

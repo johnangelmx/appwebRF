@@ -42,7 +42,7 @@ public class PasajeroService {
     }
 
 
-    public Pasajero actualizarPasajero(Integer passangerID, Integer id_viaje, String nombres, String apellidos, String correo, Time hora, Boolean pagado, String dpi, Float peso, String fecha) {
+    public Pasajero actualizarPasajero(Integer passangerID, Integer id_viaje, String nombres, String apellidos, String correo, Time hora, Boolean pagado, String dpi, Float peso, String fecha, Float total) {
         Pasajero tmp = null;
         if (pasajeroRepository.existsById(passangerID)) {
             tmp = pasajeroRepository.findById(passangerID).get();
@@ -55,6 +55,7 @@ public class PasajeroService {
             if (dpi != null) tmp.setDpi(dpi);
             if (peso != null) tmp.setPeso(peso);
             if (fecha != null) tmp.setFecha(Date.valueOf(fecha));
+            if (total != null) tmp.setTotal(total);
             pasajeroRepository.save(tmp);
         }
         return tmp;

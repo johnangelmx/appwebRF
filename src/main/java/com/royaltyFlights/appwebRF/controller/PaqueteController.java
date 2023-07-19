@@ -47,12 +47,11 @@ public class PaqueteController {
                                  @RequestParam(required = false) String nombre_paquete,
                                  @RequestParam(required = false) String tipo_vuelo,
                                  @RequestParam(required = false) String descripcion,
-                                 @RequestParam(required = false) Integer numero_personas,
+                                 @RequestParam(required = false) Integer numero_max_personas,
                                  @RequestParam(required = false) Float precio,
-                                 @RequestParam(required = false) Float precio_individual,
                                  @RequestParam(required = false) Boolean estatus
     ) {
-        return paqueteService.actualizarPaquete(id_paquete, nombre_paquete, tipo_vuelo, descripcion, numero_personas, precio, precio_individual, estatus);
+        return paqueteService.actualizarPaquete(id_paquete, nombre_paquete, tipo_vuelo, descripcion, numero_max_personas, precio, estatus);
     }
 
 }

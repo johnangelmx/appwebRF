@@ -39,16 +39,15 @@ public class PaqueteService {
         return tmp;
     }
 
-    public Paquete actualizarPaquete(Integer idPaquete, String nombrePaquete, String tipoVuelo, String descripcion, Integer numeroPersonas, Float precio, Float precioIndividual, Boolean estatus) {
+    public Paquete actualizarPaquete(Integer idPaquete, String nombrePaquete, String tipoVuelo, String descripcion, Integer numero_max_personas, Float precio, Boolean estatus) {
         Paquete tmp = null;
         if (paqueteRepository.existsById(idPaquete)) {
             tmp = paqueteRepository.findById(idPaquete).get();
             if (nombrePaquete != null) tmp.setNombre_paquete(nombrePaquete);
             if (tipoVuelo != null) tmp.setTipo_vuelo(tipoVuelo);
             if (descripcion != null) tmp.setDescripcion(descripcion);
-            if (numeroPersonas != null) tmp.setNumero_personas(numeroPersonas);
+            if (numero_max_personas != null) tmp.setNumero_max_personas(numero_max_personas);
             if (precio != null) tmp.setPrecio(precio);
-            if (precioIndividual != null) tmp.setPrecio_individual(precioIndividual);
             if (estatus != null) tmp.setEstatus(estatus);
             paqueteRepository.save(tmp);
         }

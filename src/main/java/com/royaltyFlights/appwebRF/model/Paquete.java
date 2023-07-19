@@ -16,8 +16,7 @@ public class Paquete {
     private String nombre_paquete;
     private String tipo_vuelo;
     private String descripcion;
-    private Integer numero_personas;
+    private Integer numero_max_personas;
     private Float precio;
-    private Float precio_individual;
     private Boolean estatus = true;
 }
