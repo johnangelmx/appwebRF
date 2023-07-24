@@ -13,6 +13,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping(path = "/api/creacion-cita")
+@CrossOrigin(origins = "https://www.royaltyflightsgt.com")
 public class CreacionCitaController {
     private final CreacionCitaService creacionCitaService;
 

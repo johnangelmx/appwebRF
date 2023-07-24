@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "/api/paquetes")
+@CrossOrigin(origins = "https://www.royaltyflightsgt.com")
 public class PaqueteController {
     private final PaqueteService paqueteService;
 

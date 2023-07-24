@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "/api/pasajeros")
+@CrossOrigin(origins = "https://www.royaltyflightsgt.com")
 public class PasajeroController {
     private final PasajeroService pasajeroService;
 
@@ -60,7 +61,7 @@ public class PasajeroController {
                                     @RequestParam(required = false) String fecha,
                                     @RequestParam(required = false) Float total
     ) {
-        return pasajeroService.actualizarPasajero(passangerID, id_viaje, nombres, apellidos, correo, hora, pagado, dpi, peso, fecha,total
+        return pasajeroService.actualizarPasajero(passangerID, id_viaje, nombres, apellidos, correo, hora, pagado, dpi, peso, fecha, total
         );
     }
 
