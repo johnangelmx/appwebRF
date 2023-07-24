@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "/api/pasajeros")
-@CrossOrigin(origins = "https://www.royaltyflightsgt.com")
+@CrossOrigin(origins = "*")
 public class PasajeroController {
     private final PasajeroService pasajeroService;
 
